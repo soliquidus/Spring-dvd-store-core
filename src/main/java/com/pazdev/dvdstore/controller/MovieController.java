@@ -7,7 +7,15 @@ import java.util.Scanner;
 
 public class MovieController {
 
-    private final MovieService movieService = new MovieService();
+    private MovieService movieService = new MovieService();
+
+    public MovieService getMovieService() {
+        return movieService;
+    }
+
+    public void setMovieService(MovieService movieService) {
+        this.movieService = movieService;
+    }
 
     public void addUsingConsole(){
         System.out.println( "What is the movie title?" );
