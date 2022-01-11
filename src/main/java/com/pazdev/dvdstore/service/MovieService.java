@@ -1,11 +1,11 @@
 package com.pazdev.dvdstore.service;
 
 import com.pazdev.dvdstore.entity.Movie;
-import com.pazdev.dvdstore.repository.MovieRepository;
+import com.pazdev.dvdstore.repository.GoLiveMovieRepository;
 
 
 public class MovieService {
-    private MovieRepository movieRepository = new MovieRepository();
+    private final GoLiveMovieRepository movieRepository = new GoLiveMovieRepository();
 
     public void registerMovie(Movie movie) {
         movieRepository.add(movie);
