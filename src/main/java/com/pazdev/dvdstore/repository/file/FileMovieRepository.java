@@ -1,14 +1,18 @@
-package com.pazdev.dvdstore.repository;
+package com.pazdev.dvdstore.repository.file;
 
 import com.pazdev.dvdstore.entity.Movie;
+import com.pazdev.dvdstore.repository.MovieRepositoryInterface;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Repository;
 
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.nio.charset.StandardCharsets;
 
+@Repository
 public class FileMovieRepository implements MovieRepositoryInterface {
 
+    @Value("${movies.file.location}")
     private File file;
 
     public void addMovie(Movie movie) {

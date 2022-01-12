@@ -2,11 +2,15 @@ package com.pazdev.dvdstore.controller;
 
 import com.pazdev.dvdstore.entity.Movie;
 import com.pazdev.dvdstore.service.DefaultMovieService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 
 import java.util.Scanner;
 
+@Controller
 public class MovieController {
 
+    @Autowired
     private DefaultMovieService movieService = new DefaultMovieService();
 
     public DefaultMovieService getMovieService() {
