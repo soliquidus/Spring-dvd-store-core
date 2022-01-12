@@ -1,19 +1,19 @@
 package com.pazdev.dvdstore.controller;
 
 import com.pazdev.dvdstore.entity.Movie;
-import com.pazdev.dvdstore.service.MovieService;
+import com.pazdev.dvdstore.service.DefaultMovieService;
 
 import java.util.Scanner;
 
 public class MovieController {
 
-    private MovieService movieService = new MovieService();
+    private DefaultMovieService movieService = new DefaultMovieService();
 
-    public MovieService getMovieService() {
+    public DefaultMovieService getMovieService() {
         return movieService;
     }
 
-    public void setMovieService(MovieService movieService) {
+    public void setMovieService(DefaultMovieService movieService) {
         this.movieService = movieService;
     }
 
