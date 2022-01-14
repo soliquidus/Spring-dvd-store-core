@@ -1,10 +1,11 @@
-package com.pazdev.dvdstore.service;
+package com.pazdev.dvdstore.core.service;
 
-import com.pazdev.dvdstore.entity.Movie;
+import com.pazdev.dvdstore.core.entity.Movie;
 
 import java.util.List;
 
 public interface MovieServiceInterface {
     void registerMovie(Movie movie);
     List<Movie> getMovieList();
+    Movie getMovieById(long id);
 }

@@ -1,4 +1,4 @@
-package com.pazdev.dvdstore;
+package com.pazdev.dvdstore.core;
 
 import static org.junit.Assert.assertTrue;
 

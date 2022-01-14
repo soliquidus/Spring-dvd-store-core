@@ -1,7 +1,7 @@
-package com.pazdev.dvdstore.repository.memory;
+package com.pazdev.dvdstore.core.repository.memory;
 
-import com.pazdev.dvdstore.entity.Movie;
-import com.pazdev.dvdstore.repository.MovieRepositoryInterface;
+import com.pazdev.dvdstore.core.entity.Movie;
+import com.pazdev.dvdstore.core.repository.MovieRepositoryInterface;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,5 +19,12 @@ public class MemoryMovieRepository implements MovieRepositoryInterface {
     @Override
     public List<Movie> list() {
         return movies;
+    }
+
+    @Override
+    public Movie getById(long id) {
+        return movies.stream().
+                filter(m -> m.getId()==id).
+                findFirst().get();
     }
 }
